@@ -1,4 +1,4 @@
-FROM ccr.ccs.tencentyun.com/default-w7/pop-minivote-stand-alone-image
+FROM ccr.ccs.tencentyun.com/default-w7/pop-minivote-stand-alone-image:php7.4.30-swoole-alpine
 MAINTAINER poplanchong123 <1227191457@qq.com>
 
 ENV WEB_PATH /app/w7-demo
