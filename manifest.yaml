@@ -1,0 +1,20 @@
+application:
+  name: w7-demo示例
+  identifie: w7-demo
+  description: 'w7-demo'
+  author: poplanchong123
+platform:
+  container:
+    containerPort: 80
+    minNum: 0
+    maxNum: 10
+    cpu: 1
+    mem: 2
+    policyType: cpu
+    policyThreshold: 80
+    customLogs: stdout
+    initialDelaySeconds: 2
+    envParams: {  }
+    isNeedMysql: true
+bindings:
+  menu: {  }

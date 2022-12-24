@@ -4,6 +4,7 @@ MAINTAINER poplanchong123 <1227191457@qq.com>
 ENV WEB_PATH /app/w7-demo
 ADD . $WEB_PATH
 ADD ./web.conf /usr/local/nginx/conf/vhost/
+ADD ./web.conf /etc/nginx/conf.d/vhost/
 
 WORKDIR $WEB_PATH
 
