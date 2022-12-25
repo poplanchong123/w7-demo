@@ -1,14 +1,12 @@
-FROM ccr.ccs.tencentyun.com/w7team/swoole:fpm-php7.2
-MAINTAINER yuanwentao <admin@w7.com>
+FROM ccr.ccs.tencentyun.com/default-w7/pop-minivote-stand-alone-image:php7.4.30-swoole-alpine
 
-
-ENV PHP_INI_DIR /etc/php7
+# ENV PHP_INI_DIR /etc/php7
 
 ENV WEB_PATH /home/w7-demo
 ADD . $WEB_PATH
 ADD ./web.conf /usr/local/nginx/conf/vhost/
-ADD ./bolt.so /usr/lib/php7/modules/
-RUN echo "extension=/usr/lib/php7/modules/bolt.so" > $PHP_INI_DIR/conf.d/php-ext-custom-bolt.ini
+# ADD ./bolt.so /usr/lib/php7/modules/
+# RUN echo "extension=/usr/lib/php7/modules/bolt.so" > $PHP_INI_DIR/conf.d/php-ext-custom-bolt.ini
 
 
 WORKDIR $WEB_PATH
